@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+	 <meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="description" content="">
+	 <meta name="author" content="">
+
+	 <title>Stock Suggestion Engine</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+	 <script src="static/js/myscript.js"></script>
+	 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	 <link rel="icon" 
+      type="image/png" 
+      href="./static/myIcon.png">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+ 
+<body class="body" >
+	<!-- style=" background-repeat: no-repeat; background-image: url(./static/Img2.jpg); background-size: cover; color:ghostwhite;" -->
+	
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+		<h1> Stock Suggestion Tool </h1>
+		<p> You can buy & track your stock portfolio </p>
+		</br> </br> </br> </br>
+		</div>
+		<div class="col-sm-6">
+			<form role="form" name="form1">
+				<label for="amount">Please enter amount to invest ($) : </label>
+				<input class="form-control" type="number" id="amount" name="amount"><br><br>
+
+				<label>Please select any two investment strategy from the following : </label><br>
+
+				<input class="investType single-checkbox" type="checkbox" id="ethical" name="investType" value="ethical" onclick="chkcontrol(0)">
+				<label for="ethical">Ethical Investing</label><br>
+
+				<input class="investType single-checkbox" type="checkbox" id="growth" name="investType" value="growth" onclick="chkcontrol(1)">
+				<label for="growth">Growth Investing</label><br>
+
+				<input class="investType single-checkbox" type="checkbox" id="index" name="investType" value="index" onclick="chkcontrol(3)">
+				<label for="index">Index Investing</label><br>
+
+				<input class="investType single-checkbox" type="checkbox" id="quality" name="investType" value="quality" onclick="chkcontrol(4)">
+				<label for="quality">Quality Investing</label><br>
+
+				<input class="investType single-checkbox" type="checkbox" id="value" name="investType" value="value" onclick="chkcontrol(5)">
+				<label for="value">Value Investing</label><br><br>
+
+				<button class="btn btn-primary" id="btnBuyStocks" type="button">Buy Stocks!</button>	
+				
+				<button class="btn btn-primary" id="btnPortfolio" type="button">Show Portfolio!</button>	
+
+				<br/><br/><br/><br/>
+				
+				<br/><br/><br/><br/>
+			</form>
+		</div>
+		<div class="col-sm-6">
+			<div class="table-responsive" style="left: 10%;">
+				<span class="plDisplay"><span>PL: </span> <span id="pl"></span></span>
+				<span class="plDisplay"><span>PL Percent: </span> <span id="plPercent"></span> </span>
+
+				<br><br>
+				
+				<span id="stockTableSpan">
+					
+				</span>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+
+     
+</body>
+ 
+</html>

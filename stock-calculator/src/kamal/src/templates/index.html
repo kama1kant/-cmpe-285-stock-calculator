@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+	 <meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="description" content="">
+	 <meta name="author" content="">
+
+	 <title>SignUp Template for Bootstrap </title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+	 <script src="static/js/myscript.js"></script>
+</head>
+ 
+<body>
+    <div class="container">
+        <form class="form-signin" role="form">
+            <h2 class="form-signin-heading">Please Sign Up</h2>
+			<label for="amount">Please enter amount to invest ($) : </label>
+			<input type="text" id="amount" name="amount"><br><br>
+
+			<input class="investType" type="checkbox" id="ethical" name="investType" value="ethical">
+			<label for="ethical">Ethical Investing</label><br>
+
+			<input class="investType" type="checkbox" id="growth" name="investType" value="growth">
+			<label for="growth">Growth Investing</label><br>
+
+			<input class="investType" type="checkbox" id="index" name="investType" value="index">
+			<label for="index">Index Investing</label><br>
+
+			<input class="investType" type="checkbox" id="quality" name="investType" value="quality">
+			<label for="quality">Quality Investing</label><br>
+
+			<input class="investType" type="checkbox" id="value" name="investType" value="value">
+			<label for="value">Value Investing</label><br><br>
+
+			<button id="btnBuyStocks" type="button">Buy Stocks!</button>	
+			
+			<button id="btnPortfolio" type="button">Show Portfolio!</button>	
+
+			<br/><br/><br/><br/>
+			<span class="plDisplay"><span>PL: </span> <span id="pl"></span></span>
+			<span class="plDisplay"><span>PL Percent: </span> <span id="plPercent"></span> </span>
+			<br/><br/><br/><br/>
+		</form>
+
+		<table>
+			<tbody id="stockTable">
+			<tr>
+				<th>Stock</th>
+				<th>Buy Price</th>
+				<th>Current Price</th>
+				<th>Count</th>
+			</tr>
+			</tbody>
+		</table>
+     </div>  
+</body>
+ 
+</html>

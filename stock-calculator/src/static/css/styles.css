@@ -1,0 +1,14 @@
+.body {
+   background-repeat: no-repeat;
+    background-image: url(../Img2.jpg);
+    background-size: cover;
+    color:ghostwhite;
+    font-size: 20px;;
+  }
+
+  .divStyle{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    margin: -150px 0 0 -150px;
+  }
